@@ -9,6 +9,6 @@ spec:
         spec:
           container:
             image: dev.local/tekton-pipeline-testing
-            imagePullPolicy: Never
+            imagePullPolicy: IfNotPresent
             ports:
             - containerPort: 3000

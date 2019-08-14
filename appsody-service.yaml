@@ -1,0 +1,14 @@
+apiVersion: serving.knative.dev/v1alpha1
+kind: Service
+metadata:
+  name: tekton-pipeline-testing
+spec:
+  runLatest:
+    configuration:
+      revisionTemplate:
+        spec:
+          container:
+            image: dev.local/tekton-pipeline-testing
+            imagePullPolicy: Never
+            ports:
+            - containerPort: 3000
